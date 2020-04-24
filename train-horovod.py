@@ -31,7 +31,7 @@ def train_main(dataset,
                model_name='117M',
                seed=None,
                batch_size=2,
-               sample_length=1023,
+               sample_length=1024,
                sample_num=1,
                sample_every=4500,
                run_name='run1',
@@ -70,8 +70,8 @@ def train_main(dataset,
             length=sample_length,
             context=context,
             batch_size=batch_size,
-            temperature=0.8,
-            top_k=40)
+            temperature=1.3,
+            top_k=50)
 
         train_vars = [v for v in tf.trainable_variables() if 'model' in v.name]
 
